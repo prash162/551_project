@@ -1,5 +1,5 @@
 
-module VectorRegFile(VreadA,VreadB,clk,Vwrdata,VwrAddr,VwrEn,Va,Vb,Vdone);
+module VectorRegFile(VreadA,VreadB,clk,Vwrdata,VwrAddr,VwrEn,Vstart,Vreset,Va,Vb,Vdone);
 input [2:0] VreadA,VreadB , VwrAddr;
 input clk,VwrEn,Vreset,Vstart;
 input [255:0] Vwrdata;
@@ -12,7 +12,7 @@ always@(posedge clk)
 begin
 		Va<=VectorReg[VreadA];
 		Vb<=VectorReg[VreadB];
-		if((VwrEn==1))
+		if((VwrEn==1) && (Vstart==1))
 			VectorReg[VwrAddr]<= Vwrdata;			
 		else
 			VectorReg[VwrAddr]<=VectorReg[VwrAddr];

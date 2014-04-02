@@ -1,0 +1,43 @@
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project 551_mt
+# reading /cae/apps/data/mentor-2013/MODELSIM_SE_10.2C/modeltech/linux_x86_64/../modelsim.ini
+# Loading project Project
+# Compile of buffer.v was successful.
+# Compile of Decoder.v was successful.
+# Compile of decoder3to8.v was successful.
+# Compile of DFF16.v was successful.
+# Compile of mux8to1.v was successful.
+# Compile of program_counter.v was successful.
+# Compile of ScalarRegFile.v was successful.
+# Compile of top.v failed with 1 errors.
+# Compile of VectorRegFile.v was successful.
+# Compile of simplemem.v was successful.
+# 10 compiles, 1 failed with 1 error. 
+# Compile of decoder3to8.v was successful.
+# Compile of decoder3to8.v was successful.
+# Compile of decoder3to8.v was successful.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 2 errors.
+# Compile of top.v failed with 2 errors.
+# Compile of top.v failed with 2 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v failed with 1 errors.
+# Compile of top.v was successful.

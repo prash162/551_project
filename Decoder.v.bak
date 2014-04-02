@@ -1,5 +1,5 @@
 
-module decoder(Instr, ctrl_path, SreadB, VreadA );
+module decoder(Instr, ctrl_path, SreadB, VreadA,  );
 input [3:0] Instr; 
 wire VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP;
 wire fpu, ld_st, sll_slh;
