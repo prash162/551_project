@@ -4,11 +4,11 @@ module cpu (clk1,clk2,rst);
   
   wire [15:0]DataOut,DataIn;
   reg  Addr;
-  reg RD, WR,next_RD,next_WR,addr_sel,start_calc,SwrEn,VwrEn;
+  reg next_RD,next_WR,addr_sel,start_calc,SwrEn,VwrEn,MR_en,MW_en,RD_MR,WR_MW,RD_top,WR_top,sst_done,next_sst_done;
   reg [15:0]PC,next_PC;
   wire [6:0]ctrl_path; // {fpu,ld,sst,vst,sll_slh,jmp,nop}
-  wire vld_done,Sdone,Vdone,fpu_done,Memdone,vst_done,inst_done;
-  wire [15:0] MemAddr,addr_out,SreadB,Swrdata,Vwrdata,Sa,Sb,Sout,sll_slh_out;
+  wire vld_done,Sdone,Vdone,fpu_done,Memdone,vst_done,inst_done,RD,WR;
+  wire [15:0] MemAddr,addr_out,SreadB,Swrdata,Vwrdata,Sa,Sb,Sout,sll_slh_out,MemAddr_RD_WR;
   wire [255:0] VreadA,Va,Vb,Vout,DataBuff;
   wire VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP;
   reg [3:0]state,next_state;
@@ -30,23 +30,27 @@ module cpu (clk1,clk2,rst);
   
   staticram sram(DataOut, MemAddr, DataIn, clk1, clk2, RD, WR);
   PC pc(clk2,next_PC,rst,inst_done,PC,J,DataOut);
-  //decoder dec(DataOut[15:12],ctrl_path, SreadB, VreadA);
-  decoder dec(DataOut[15:12], ctrl_path, SreadB, VreadA,VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP);
+  decoder dec(DataOut, ctrl_path, SreadB, VreadA,VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP);
   address_calculator calc(DataOut,addr_out,start_calc);
   ScalarRegFile s_reg(DataOut[11:9],SreadB,clk2,Swrdata,DataOut[11:9],SwrEn,Sa,Sb,Sdone);
   VectorRegFile v_reg(VreadA,DataOut[5:3],clk2,Vwrdata,DataOut[11:9],VwrEn,Va,Vb,Vdone);
   fpu fpu1(Sa,Sb,Va,Vb,Vout,Sout, fpu_done);
   sll_slh sll0(DataOut[7:0],DataOut[11:9],sll_slh_out);
+  MemoryRead Mread(MemAddr_RD_WR, RD_MR, DataBuff, vld_done, clk1, clk2, MR_en,addr_out , DataOut);
+  Mem_Write Memwrite(MemAddr_RD_WR, WR_MW, DataIn, vst_done, Clk1, Clk2, MW_en, Va, addr_out);
+  fpu(Sa,Sb,Va,Vb,Vout,Sout, fpu_done);
   
   assign Swrdata =  (VDOT) ? Sout: sll_slh_out;
                     
   assign Vwrdata = (VADD|SMUL) ? Vout : DataBuff; // VADD/SMUL/VLD// check after instantiation
   
   assign inst_done = (Sdone|Vdone|Memdone);
+  assign Memdone = (vst_done|sst_done);
   
-  
-  assign DataOut=(addr_sel==0)? PC: addr_out;  // addr_sel = 0 for PC, addr_sel =1 for addr_out
+  assign MemAddr=(addr_sel==0)? PC:MemAddr_RD_WR ;  // addr_sel = 0 for PC, addr_sel =1 for addr_out
  
+  assign RD = (VLD)? RD_MR : RD_top;
+  assign WR = (VST)? WR_MW : WR_top;
   
   always@(posedge clk1)
   begin
@@ -95,7 +99,7 @@ module cpu (clk1,clk2,rst);
            end
       S4:  begin
             if(ctrl_path[5]) // vld
-                next_state=S7; 
+                next_state=S7;  
            else if (ctrl_path[4]) //sst
                 next_state=S8;  
            else if (ctrl_path[3]) //vst
@@ -131,15 +135,17 @@ module cpu (clk1,clk2,rst);
   // Memory control assert
   always@(posedge clk2)
   begin
-    if(rst)
+    if(rst) 
       begin
-        RD<=1'b0;
-        WR<=1'b0;
+        RD_top<=1'b0;
+        WR_top<=1'b0;
+        sst_done<=1'b0;
       end
     else
       begin
-        RD<=next_RD;
-        WR<=next_WR;
+        RD_top<=next_RD;
+        WR_top<=next_WR;
+        sst_done<=next_sst_done;
         
       end
   end
@@ -149,6 +155,7 @@ module cpu (clk1,clk2,rst);
     begin
     next_RD=1'b0;
     next_WR=1'b0;
+    next_sst_done=1'b0;
         
       case(state)
         
@@ -183,6 +190,8 @@ module cpu (clk1,clk2,rst);
     start_calc=1'b0;
     VwrEn=1'b0;
     SwrEn=1'b0;
+    MR_en=1'b0;
+    MW_en=1'b0;
     
     
     case(state)
@@ -192,6 +201,9 @@ module cpu (clk1,clk2,rst);
             SwrEn = (VDOT|SLH|SLL)? 1'b1: 1'b0;
             VwrEn = (VADD|SMUL|VLD)? 1'b1: 1'b0;
           end
+      S7: MR_en=1'b1;
+      S10: MW_en=1'b1;
+           
         
     endcase
     end // end always

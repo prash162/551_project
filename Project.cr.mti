@@ -1,24 +1,35 @@
-/filespace/people/c/chandana/Chandana/551/551_project/ScalarRegFile.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/ScalarRegFile.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
--- Compiling module ScalarRegFile
-
-Top level modules:
-	ScalarRegFile
-
-} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/decoder3to8.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/decoder3to8.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
--- Compiling module dec3to8
-
-Top level modules:
-	dec3to8
-
-} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/simplemem.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/simplemem.v
+/filespace/people/c/chandana/Chandana/551/551_project/simplemem.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/simplemem.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 -- Compiling module staticram
 -- Compiling module t_staticram
 
 Top level modules:
 	t_staticram
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/VectorRegFile.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/VectorRegFile.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module VectorRegFile
+
+Top level modules:
+	VectorRegFile
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/buffer.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/buffer.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/ScalarRegFile.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/ScalarRegFile.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module ScalarRegFile
+
+Top level modules:
+	ScalarRegFile
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/fp_adder.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/fp_adder.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module fp_adder
+-- Compiling module tb_fp_adder
+
+Top level modules:
+	tb_fp_adder
 
 } {} {}} /filespace/people/c/chandana/Chandana/551/551_project/mux8to1.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/mux8to1.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
@@ -27,29 +38,68 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 Top level modules:
 	Mux8to1
 
-} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/buffer.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/buffer.v
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/Mem_Read_FSM.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/Mem_Read_FSM.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module MemoryRead
 
-} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/top.v {0 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/top.v
+Top level modules:
+	MemoryRead
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/sll_slh.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/sll_slh.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module sll_slh
+
+Top level modules:
+	sll_slh
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/top.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/top.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 -- Compiling module cpu
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(17): (vlog-2730) Undefined variable: 'rst'.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(18): (vlog-2730) Undefined variable: 'state'.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(20): (vlog-2730) Undefined variable: 'next_state'.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(27): (vlog-2730) Undefined variable: 'DataOut'.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(27): (vlog-2730) Undefined variable: 'Addr'.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(27): (vlog-2730) Undefined variable: 'DataIn'.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(27): (vlog-2730) Undefined variable: 'RD'.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(27): (vlog-2730) Undefined variable: 'WR'.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(27): Checker 'staticram' not found.  Instantiation 'DUT_sram' must be of a visible checker.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(27): A begin/end block was found with an empty body.  This is permitted in SystemVerilog, but not permitted in Verilog.  Please look for any stray semicolons.
-** Error: /filespace/people/c/chandana/Chandana/551/551_project/top.v(1): Identifier must be declared with a port mode: rst.
+-- Compiling module address_calculator
 
-} {4.0 15.0} {}} /filespace/people/c/chandana/Chandana/551/551_project/DFF16.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/DFF16.v
+Top level modules:
+	cpu
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/fpu.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/fpu.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module fpu
+
+Top level modules:
+	fpu
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/decoder3to8.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/decoder3to8.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module dec3to8
+
+Top level modules:
+	dec3to8
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/Mem_Write_FSM.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/Mem_Write_FSM.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module Mem_Write
+
+Top level modules:
+	Mem_Write
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/Decoder.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/Decoder.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module decoder
+
+Top level modules:
+	decoder
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/DFF16.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/DFF16.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 -- Compiling module Dff16
 
 Top level modules:
 	Dff16
+
+} {} {}} /filespace/people/c/chandana/Chandana/551/551_project/program_counter.v {1 {vlog -work work -vopt /filespace/people/c/chandana/Chandana/551/551_project/program_counter.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module PC
+
+Top level modules:
+	PC
 
 } {} {}}

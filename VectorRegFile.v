@@ -1,7 +1,7 @@
 
 module VectorRegFile(VreadA,VreadB,clk,Vwrdata,VwrAddr,VwrEn,Va,Vb,Vdone);
 input [2:0] VreadA,VreadB , VwrAddr;
-input clk,VwrEn,Vreset,Vstart;
+input clk,VwrEn;
 input [255:0] Vwrdata;
 output Vdone;
 output reg [255:0] Va,Vb;

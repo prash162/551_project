@@ -1,15 +1,15 @@
 
-module decoder(Instr, ctrl_path, SreadB, VreadA );
-input [3:0] Instr; 
-wire VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP;
+module decoder(Instr, ctrl_path, SreadB, VreadA,VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP );
+input [15:0] Instr; 
+//wire VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP;
 wire fpu, ld_st, sll_slh;
 output [6:0]ctrl_path;
-reg VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP;
+output reg VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP;
 output [2:0] SreadB, VreadA;
 
 always@(Instr)
 begin
-	case(Instr)	
+	case(Instr[15:12])	
 		4'b0000:
 			{VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP} = 10'b1000000000;
 		4'b0001:

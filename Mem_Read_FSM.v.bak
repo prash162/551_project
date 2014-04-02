@@ -4,7 +4,7 @@ output reg [15:0] Addr;
 output reg RD;
 output reg done_vld;
 output reg [255:0] DataBuff;
-input Clk1, Clk2, MR_en;
+input Clk1, Clk2, Rst;
 input [15:0] DataOut;
 input [15:0] AddrIn;
 
