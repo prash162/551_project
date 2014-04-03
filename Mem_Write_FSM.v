@@ -9,7 +9,7 @@ input [255:0] VectorReg;
 input [15:0] AddrIn;
 
 reg [4:0] state;
-reg next_done_vst;
+//reg next_done_vst;
 
 
 parameter S0	=	5'b00000;
@@ -176,6 +176,7 @@ begin
 						end
 			S16:	begin
 							DataIn <= 16'h0000;
+							WR <= 0;
 						end
 			default:	begin
 									DataIn <= 16'h0000;
@@ -189,19 +190,14 @@ always @ (state)
 begin
 	if (state == S16)
 	begin
-		next_done_vst = 1'b1;
+		done_vst = 1'b1;
 	end
 	else
 	begin
-		next_done_vst = 1'b0;
+		done_vst = 1'b0;
 	end
 end
 
-
-always @ (posedge Clk2)
-begin
-	done_vst <= next_done_vst;
-end
 
 endmodule
 

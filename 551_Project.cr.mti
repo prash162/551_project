@@ -1,0 +1,120 @@
+/filespace/people/c/chada/project_551/551_project/ScalarRegFile.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/ScalarRegFile.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module ScalarRegFile
+
+Top level modules:
+	ScalarRegFile
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/fp_adder.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/fp_adder.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module fp_adder
+-- Compiling module tb_fp_adder
+
+Top level modules:
+	tb_fp_adder
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/mux8to1.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/mux8to1.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module Mux8to1
+
+Top level modules:
+	Mux8to1
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/Mem_Read_FSM.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/Mem_Read_FSM.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module MemoryRead
+
+Top level modules:
+	MemoryRead
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/sll_slh.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/sll_slh.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module sll_slh
+
+Top level modules:
+	sll_slh
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/t_Mem_Write_FSM.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/t_Mem_Write_FSM.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module t_Mem_Write
+
+Top level modules:
+	t_Mem_Write
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/t_Mem_Read_FSM.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/t_Mem_Read_FSM.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module t_MemoryRead
+
+Top level modules:
+	t_MemoryRead
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/top.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/top.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module CVP14
+-- Compiling module address_calculator
+-- Compiling module SST
+
+Top level modules:
+	CVP14
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/fpu.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/fpu.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module fpu
+
+Top level modules:
+	fpu
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/decoder3to8.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/decoder3to8.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module dec3to8
+
+Top level modules:
+	dec3to8
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/Mem_Write_FSM.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/Mem_Write_FSM.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module Mem_Write
+
+Top level modules:
+	Mem_Write
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/Decoder.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/Decoder.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module decoder
+
+Top level modules:
+	decoder
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/program_counter.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/program_counter.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module Prog_Counter
+
+Top level modules:
+	Prog_Counter
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/DFF16.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/DFF16.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module Dff16
+
+Top level modules:
+	Dff16
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/VectorRegFile.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/VectorRegFile.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module VectorRegFile
+
+Top level modules:
+	VectorRegFile
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/simplemem.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/simplemem.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module staticram
+-- Compiling module t_staticram
+
+Top level modules:
+	t_staticram
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/buffer.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/buffer.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+
+} {} {}}

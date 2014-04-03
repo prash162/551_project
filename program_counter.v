@@ -1,6 +1,6 @@
 // Program Counter
 
-module PC(clock,D,reset,enable,Q,J,DataOut);
+module Prog_Counter(clock,D,reset,enable,Q,J,DataOut);
 parameter ADDR_MAX=16;
 input J;
 input clock;
