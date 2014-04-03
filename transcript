@@ -7,198 +7,23 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading project 551_mt
-# reading /cae/apps/data/mentor-2013/MODELSIM_SE_10.2C/modeltech/linux_x86_64/../modelsim.ini
-# Loading project Project
+# Loading project 551_Project
 # Compile of buffer.v was successful.
 # Compile of Decoder.v was successful.
 # Compile of decoder3to8.v was successful.
 # Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v failed with 1 errors.
-# Compile of VectorRegFile.v was successful.
-# Compile of simplemem.v was successful.
-# 10 compiles, 1 failed with 1 error. 
-# Compile of decoder3to8.v was successful.
-# Compile of decoder3to8.v was successful.
-# Compile of decoder3to8.v was successful.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 2 errors.
-# Compile of top.v failed with 2 errors.
-# Compile of top.v failed with 2 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v failed with 1 errors.
-# Compile of top.v was successful.
-# Compile of buffer.v was successful.
-# Compile of Decoder.v failed with 1 errors.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v failed with 1 errors.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v failed with 1 errors.
-# Compile of VectorRegFile.v failed with 1 errors.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# 14 compiles, 6 failed with 6 errors. 
-# Compile of buffer.v was successful.
-# Compile of Decoder.v failed with 1 errors.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v failed with 1 errors.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v failed with 1 errors.
-# Compile of VectorRegFile.v failed with 1 errors.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# 14 compiles, 6 failed with 6 errors. 
-# Compile of buffer.v was successful.
-# Compile of Decoder.v failed with 1 errors.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v failed with 1 errors.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v was successful.
-# Compile of VectorRegFile.v failed with 1 errors.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# 14 compiles, 5 failed with 5 errors. 
-# Compile of buffer.v was successful.
-# Compile of Decoder.v failed with 1 errors.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v failed with 1 errors.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v was successful.
-# Compile of VectorRegFile.v was successful.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# 14 compiles, 4 failed with 4 errors. 
-# Compile of buffer.v was successful.
-# Compile of Decoder.v failed with 1 errors.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v was successful.
-# Compile of VectorRegFile.v was successful.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# 14 compiles, 3 failed with 3 errors. 
-# Compile of buffer.v was successful.
-# Compile of Decoder.v was successful.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v was successful.
-# Compile of VectorRegFile.v was successful.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# 14 compiles, 2 failed with 2 errors. 
-# Compile of buffer.v was successful.
-# Compile of Decoder.v was successful.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v failed with 1 errors.
-# Compile of VectorRegFile.v was successful.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v failed with 1 errors.
-# Compile of Mem_Write_FSM.v failed with 1 errors.
-# 14 compiles, 5 failed with 5 errors. 
-# Compile of buffer.v was successful.
-# Compile of Decoder.v was successful.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v failed with 1 errors.
-# Compile of VectorRegFile.v was successful.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# 14 compiles, 3 failed with 3 errors. 
-# Compile of buffer.v was successful.
-# Compile of Decoder.v was successful.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
-# Compile of mux8to1.v was successful.
-# Compile of program_counter.v was successful.
-# Compile of ScalarRegFile.v was successful.
-# Compile of top.v was successful.
-# Compile of VectorRegFile.v was successful.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of sll_slh.v failed with 1 errors.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# 14 compiles, 2 failed with 2 errors. 
 # Compile of fp_adder.v was successful.
-# Compile of fpu.v failed with 1 errors.
-# Compile of fpu.v failed with 1 errors.
-# Compile of fpu.v failed with 1 errors.
-# Compile of fpu.v failed with 1 errors.
-# Compile of fpu.v failed with 1 errors.
-# Compile of fpu.v failed with 1 errors.
-# Compile of fpu.v failed with 1 errors.
 # Compile of fpu.v was successful.
-# Compile of sll_slh.v was successful.
-# Compile of buffer.v was successful.
-# Compile of Decoder.v was successful.
-# Compile of decoder3to8.v was successful.
-# Compile of DFF16.v was successful.
+# Compile of Mem_Read_FSM.v was successful.
+# Compile of Mem_Write_FSM.v was successful.
 # Compile of mux8to1.v was successful.
 # Compile of program_counter.v was successful.
 # Compile of ScalarRegFile.v was successful.
+# Compile of simplemem.v was successful.
+# Compile of sll_slh.v was successful.
+# Compile of t_Mem_Read_FSM.v was successful.
+# Compile of t_Mem_Write_FSM.v was successful.
 # Compile of top.v was successful.
 # Compile of VectorRegFile.v was successful.
-# Compile of simplemem.v was successful.
-# Compile of fpu.v was successful.
-# Compile of sll_slh.v was successful.
-# Compile of Mem_Read_FSM.v was successful.
-# Compile of Mem_Write_FSM.v was successful.
-# Compile of fp_adder.v was successful.
-# 15 compiles, 0 failed with no errors. 
+# Compile of t_cpu.v was successful.
+# 18 compiles, 0 failed with no errors. 

@@ -5,14 +5,6 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 Top level modules:
 	ScalarRegFile
 
-} {} {}} /filespace/people/c/chada/project_551/551_project/fp_adder.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/fp_adder.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
--- Compiling module fp_adder
--- Compiling module tb_fp_adder
-
-Top level modules:
-	tb_fp_adder
-
 } {} {}} /filespace/people/c/chada/project_551/551_project/mux8to1.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/mux8to1.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 -- Compiling module Mux8to1
@@ -57,13 +49,6 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 Top level modules:
 	CVP14
 
-} {} {}} /filespace/people/c/chada/project_551/551_project/fpu.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/fpu.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
--- Compiling module fpu
-
-Top level modules:
-	fpu
-
 } {} {}} /filespace/people/c/chada/project_551/551_project/decoder3to8.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/decoder3to8.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 -- Compiling module dec3to8
@@ -85,13 +70,6 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 Top level modules:
 	decoder
 
-} {} {}} /filespace/people/c/chada/project_551/551_project/program_counter.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/program_counter.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
--- Compiling module Prog_Counter
-
-Top level modules:
-	Prog_Counter
-
 } {} {}} /filespace/people/c/chada/project_551/551_project/DFF16.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/DFF16.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 -- Compiling module Dff16
@@ -99,12 +77,12 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 Top level modules:
 	Dff16
 
-} {} {}} /filespace/people/c/chada/project_551/551_project/VectorRegFile.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/VectorRegFile.v
+} {} {}} /filespace/people/c/chada/project_551/551_project/program_counter.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/program_counter.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
--- Compiling module VectorRegFile
+-- Compiling module Prog_Counter
 
 Top level modules:
-	VectorRegFile
+	Prog_Counter
 
 } {} {}} /filespace/people/c/chada/project_551/551_project/simplemem.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/simplemem.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
@@ -114,7 +92,21 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
 Top level modules:
 	t_staticram
 
+} {} {}} /filespace/people/c/chada/project_551/551_project/VectorRegFile.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/VectorRegFile.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module VectorRegFile
+
+Top level modules:
+	VectorRegFile
+
 } {} {}} /filespace/people/c/chada/project_551/551_project/buffer.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/buffer.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+
+} {} {}} /filespace/people/c/chada/project_551/551_project/t_cpu.v {1 {vlog -work work -vopt /filespace/people/c/chada/project_551/551_project/t_cpu.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module t_cpu
+
+Top level modules:
+	t_cpu
 
 } {} {}}
