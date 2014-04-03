@@ -6,8 +6,8 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
   
   
   reg[15:0]Latch_DataOut;
-  reg  [15:0] Addr;
-  reg next_RD,next_WR,start_calc,SwrEn,VwrEn,MR_en,MW_en,RD_top,WR_top,sst_done,reg_done,nop_done;
+  //reg  [15:0] Addr;
+  reg next_RD,next_WR,start_calc,SwrEn,VwrEn,MR_en,MW_en,RD_top,WR_top,sst_done,reg_done,nop_done,V_done;
   reg [1:0]addr_sel;
   wire [15:0]PC,next_PC;
   wire [6:0]ctrl_path; // {fpu,ld,sst,vst,sll_slh,jmp,nop}
@@ -17,7 +17,7 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
   wire VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP;
   reg [3:0]state,next_state;
   wire [2:0] SreadB,SreadA,VreadA,VreadB;
-  
+  wire [2:0] SwrAddr;
   
   parameter S0  = 4'b0000;// reset
   parameter S1  = 4'b0001;// IF
@@ -34,17 +34,19 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
   
   
   //staticram sram(MemDataOut, MemAddr, DataIn, clk1, clk2, RD, WR);
-  Prog_Counter pc1(Clk2,next_PC,Reset,inst_done,PC,J,Latch_DataOut);
+  Prog_Counter pc1(Clk2,next_PC,Reset,inst_done,PC,J,V_done,Latch_DataOut);
   decoder dec(Latch_DataOut, ctrl_path, SreadB, VreadA,VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP);
   address_calculator calc(Latch_DataOut[5:0],Sb,addr_out,start_calc);
-  ScalarRegFile s_reg(SreadA,SreadB,Clk2,Swrdata,Latch_DataOut[11:9],SwrEn,Sa,Sb);
+  ScalarRegFile s_reg(SreadA,SreadB,Clk2,Swrdata,SwrAddr,SwrEn,Sa,Sb);
   VectorRegFile v_reg(VreadA,VreadB,Clk2,Vwrdata,Latch_DataOut[11:9],VwrEn,Va,Vb);
-  fpu fpu1(Sa,Sb,Va,Vb,Vout,Sout, fpu_done,VADD,VDOT,SMUL);
+  fpu fpu1(Latch_DataOut,Sa,Sb,Va,Vb,Vout,V,Sout, fpu_done,VADD,VDOT,SMUL);
   sll_slh sll0(Latch_DataOut[7:0],Sa,SLL,SLH,sll_slh_out);
   MemoryRead Mread(MemAddr_RD, RD_MR, DataBuff, vld_done, Clk1, Clk2, MR_en,addr_out , DataIn);
   Mem_Write Memwrite(MemAddr_WR, WR_MW, DataIn_v, vst_done, Clk1, Clk2, MW_en, Va, addr_out);
   SST sst1(addr_out,Sa,Clk2,SST_WR,DataIn_s);
   
+//Latch_DataOut[11:9]
+
   //CHANGE MEMADDR_RD_WR NAME FOR WRITE AND MAKE A SST MODULE
  // fpu(Sa,Sb,Va,Vb,Vout,Sout, fpu_done);
   assign SreadA=Latch_DataOut[11:9];
@@ -52,8 +54,10 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
   assign Swrdata =  (VDOT) ? Sout: sll_slh_out;
                
   assign Vwrdata = (VADD|SMUL) ? Vout : DataBuff; // VADD/SMUL/VLD// check after instantiation
-  
-  assign inst_done = (reg_done|Memdone)|nop_done;
+	assign SwrAddr = (V_done==1'b1) ?  3'111 : Latch_DataOut[11:9];
+
+//need to give signal for flag here.  
+  assign inst_done = ((reg_done|Memdone)|nop_done)|V_done;
   assign Memdone = (vst_done|sst_done);
   
   // CHANGE THIS MUX
@@ -202,15 +206,25 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
     SwrEn=1'b0;
     MR_en=1'b0;
     MW_en=1'b0;
-    
+    V_done=1'b0;
     
     case(state)
       S0: begin addr_sel=2'b00; end
       S4: begin start_calc=1'b1; end
         
       S6: begin
-            SwrEn = (VDOT|SLH|SLL)? 1'b1: 1'b0;
-            VwrEn = (VADD|SMUL|VLD)? 1'b1: 1'b0;
+						if ((V==1'b1) && (fpu_done==1'b1))
+							begin
+								V_done=1'b1;
+								SwrEn=1'b1;
+								VwrEn=1'b1;
+							end
+					else
+							begin
+								V_done=1'b0;
+		            SwrEn = (VDOT|SLH|SLL)? 1'b1: 1'b0;
+		            VwrEn = (VADD|SMUL|VLD)? 1'b1: 1'b0;
+							end
           end
       S7:  begin addr_sel=2'b10; MR_en=1'b1; end
       S8:  begin addr_sel=2'b01; end

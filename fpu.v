@@ -1,11 +1,12 @@
-module fpu(Sa,Sb,Va,Vb,Vout,V,Sout, fpu_done,VADD,VDOT,SMUL);
+module fpu(Instruction,Sa,Sb,Va,Vb,Vout,V,Sout, fpu_done,VADD,VDOT,SMUL);
   input [255:0] Va,Vb;
   input VADD,VDOT,SMUL;
   output reg [255:0] Vout;
-  output [15:0] Sout;
+  output reg[15:0] Sout;
   output V;
   input [15:0] Sa,Sb;
   output reg fpu_done;
+input [15:0] Instruction;
    wire [255:0] Vadd_out,Vdot_out,Smul_out;
    wire [2:0] op;
 
@@ -35,12 +36,29 @@ module fpu(Sa,Sb,Va,Vb,Vout,V,Sout, fpu_done,VADD,VDOT,SMUL);
   always@(*)
   begin
     case(op)
-      3'b100:  Vout=Vadd_out;
-      3'b010:  Vout=Vdot_out;
-      3'b001:  Vout=Smul_out;
-      default: Vout=255'b0;
+      3'b100: begin
+					  Vout=Vadd_out;
+						if(V==1'b1)
+							Sout=Instruction;
+						else
+							Sout=16'bx;
+					
+						fpu_done= 1'b1;
+					end
+      3'b010: begin
+		  			 Vout=Vdot_out;
+		  			 fpu_done= 1'b1;
+				end
+      3'b001: begin
+				  Sout=Smul_out; //   if V=1 two writes happening to scalar reg file.  one is instruction of current pc  and Sout value itself
+				  fpu_done= 1'b1;
+				end
+      default: begin 
+	    	Vout=255'bx;
+        fpu_done= 1'b0;	
+			end
     endcase
-   fpu_done= 1'b1;   
+      
   end
  
 fp_adder fp1(Va[15:   0], Vb[15:   0], Vadd_out[15:   0] ,V1  );
