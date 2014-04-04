@@ -4,7 +4,7 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
   
   
   
-  
+	  
   reg[15:0]Latch_DataOut;
   //reg  [15:0] Addr;
   reg next_RD,next_WR,start_calc,SwrEn,VwrEn,MR_en,MW_en,RD_top,WR_top,sst_done,reg_done,nop_done,V_done;
@@ -12,7 +12,7 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
   wire [15:0]PC,next_PC;
   wire [6:0]ctrl_path; // {fpu,ld,sst,vst,sll_slh,jmp,nop}
   wire vld_done,fpu_done,Memdone,vst_done,inst_done,RD_MR,WR_MW;
-  wire [15:0] addr_out,Swrdata,Sa,Sb,Sout,sll_slh_out,MemAddr_WR,MemAddr_RD,SST_WR,DataIn_s,DataIn_v;
+  wire [15:0] addr_out,Swrdata,Sa,Sb,Sout,sll_slh_out,MemAddr_WR,MemAddr_RD,SST_WR,DataOut_s,DataOut_v;
   wire [255:0] Vwrdata,Va,Vb,Vout,DataBuff;
   wire VADD,VDOT,SMUL,SST,VLD,VST,SLL,SLH,J,NOP;
   reg [3:0]state,next_state;
@@ -42,8 +42,8 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
   fpu fpu1(Latch_DataOut,Sa,Sb,Va,Vb,Vout,V,Sout, fpu_done,VADD,VDOT,SMUL);
   sll_slh sll0(Latch_DataOut[7:0],Sa,SLL,SLH,sll_slh_out);
   MemoryRead Mread(MemAddr_RD, RD_MR, DataBuff, vld_done, Clk1, Clk2, MR_en,addr_out , DataIn);
-  Mem_Write Memwrite(MemAddr_WR, WR_MW, DataIn_v, vst_done, Clk1, Clk2, MW_en, Va, addr_out);
-  SST sst1(addr_out,Sa,Clk2,SST_WR,DataIn_s);
+  Mem_Write Memwrite(MemAddr_WR, WR_MW, DataOut_v, vst_done, Clk1, Clk2, MW_en, Va, addr_out);
+  SST sst1(addr_out,Sa,Clk2,SST_WR,DataOut_s);
   
 //Latch_DataOut[11:9]
 
@@ -67,11 +67,12 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
                   (addr_sel==2'b01) ? SST_WR :
                   (addr_sel==2'b10) ? MemAddr_RD: MemAddr_WR;
                   
-  assign DataOut = SST ? DataIn_s : DataIn_v;
+  assign DataOut = SST ? DataOut_s : DataOut_v;
  
   assign RD=(RD_MR|RD_top);
-  assign WR = (VST)? WR_MW : WR_top;
-  
+  //assign WR = (VST)? WR_MW : WR_top;
+  assign WR =(WR_MW| WR_top);
+
   always@(posedge Clk1)
   begin
     if(Reset)
