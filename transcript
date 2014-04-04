@@ -27,3 +27,33 @@
 # Compile of VectorRegFile.v was successful.
 # Compile of t_cpu.v was successful.
 # 18 compiles, 0 failed with no errors. 
+vsim -novopt work.t_cpu
+# vsim -novopt work.t_cpu 
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.t_cpu
+# Loading work.t_cpu
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.CVP14
+# Loading work.CVP14
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.Prog_Counter
+# Loading work.Prog_Counter
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.decoder
+# Loading work.decoder
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.address_calculator
+# Loading work.address_calculator
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.ScalarRegFile
+# Loading work.ScalarRegFile
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.VectorRegFile
+# Loading work.VectorRegFile
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.fpu
+# Loading work.fpu
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.fp_adder
+# Loading work.fp_adder
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.sll_slh
+# Loading work.sll_slh
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.MemoryRead
+# Loading work.MemoryRead
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.Mem_Write
+# Loading work.Mem_Write
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.SST
+# Loading work.SST
+# Refreshing /filespace/people/c/chada/project_551/551_project/work.staticram
+# Loading work.staticram

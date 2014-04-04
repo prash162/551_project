@@ -2,7 +2,7 @@ module fpu(Instruction,Sa,Sb,Va,Vb,Vout,V,Sout, fpu_done,VADD,VDOT,SMUL);
   input [255:0] Va,Vb;
   input VADD,VDOT,SMUL;
   output reg [255:0] Vout;
-  output [15:0] Sout;
+  output reg[15:0] Sout;
   output V;
   input [15:0] Sa,Sb;
   output reg fpu_done;

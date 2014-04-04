@@ -10,9 +10,9 @@ reg [10:0] mres;
 wire [4:0] ea,eb;
 wire [9:0] ma,mb;
 wire sa,sb;
+wire leadBitA, leadBitB;
 
 integer i;
-
 
 assign sa=a[15];
 assign ea=a[14:10];
@@ -21,16 +21,20 @@ assign sb=b[15];
 assign eb=b[14:10];
 assign mb=b[9:0];
 
-assign fa={1'b1,ma,3'b0};
-assign fb={1'b1,mb,3'b0};
+assign leadBitA = (ea==0)?0:1;
+assign leadBitB = (eb==0)?0:1;
 
-//----------newly added part-----------------//
+assign fa={leadBitA,ma,3'b0};
+assign fb={leadBitB,mb,3'b0};
+
+//----------newly added part  (Set overflow flag)-----------------//
 always@(eres)
 begin
   if(eres==5'b11111) 
     V=1'b1;
 end
 //-------------------------------------------//
+
 always@(*)
 begin
 	dif_exp=ea-eb;
@@ -44,6 +48,8 @@ begin
 		begin
 		if(ma<mb) agtb=1'b0;
 		end
+		
+		// ******* Remove dangling if **** (Even if it creates a latch anyway)
 
 	s=sa^sb;
 	op1=agtb? fa: fb;
@@ -53,41 +59,42 @@ begin
 	bsticky=1'b0;
 	for(i=0;i<dif_exp;i=i+1)
 		begin
-	  op2=op2>>1;
-		bsticky=op2[0]|bsticky;
+	   op2=op2>>1;
+		 bsticky=op2[0]|bsticky;
 		end
 	op2[0]=bsticky;
 		
-	eres=agtb? ea+1'b1 :eb+1'b1; 
+	eres=agtb? ea+1'b1 : eb+1'b1; //why +1?
 	fres=s? op1-op2: op1+op2;
 	sres=agtb? sa : sb;
 	
 	if(eres>0)
 		  // TODO: check what is the maximum shift to maintain normalization. Does the sticky bit shift left too?
 	  	begin
- 		  if(fres[14]!=1)
+ 		  if(fres[14]!=1)    // Shift left and decrement exponent till the number becomes 1.x
 				begin
-				fres=fres<<1;
-				eres=eres-1;
+				  fres=fres<<1;
+				  eres=eres-1;
 				end
 			
 		end
+		
+// -------- Rounding Logic ----------- //
   
-  
-  
-	if(fres[3:0]<4'b1000) mres={1'b0,fres[13:4]};
+	if(fres[3:0]<4'b1000) mres={1'b0,fres[13:4]};    
 	else if(fres[3:0]>4'b1000) mres=fres[13:4]+1'b1;
 	else 
 		begin
 		if(fres[4]==1) mres=fres[13:4]+1'b1;
-		else mres=fres[13:4];
+		else mres=fres[13:4]; //mres={1'b0,fres[13:4]} 
 		end
+		
 // dn_res may have to be normalized again after rounding
-	if(mres[10]==1)
+	if(mres[10]==1)  //10.xx or 11.xx --> 1.0xx or 1.1xx..
 		begin
-		mres=mres>>1;
-		eres=eres+1'b1;
-		end
+		  mres=mres>>1;
+		  eres=eres+1'b1;
+		end               // After this the 11th bit is always zero, so mantissa = mres[9:0]
 
 
 res={sres,eres[4:0],mres[9:0]};

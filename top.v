@@ -51,7 +51,8 @@ module CVP14 (output [15:0] Addr, output RD, output WR, output V, output [15:0] 
  // fpu(Sa,Sb,Va,Vb,Vout,Sout, fpu_done);
   assign SreadA=Latch_DataOut[11:9];
   assign VreadB=Latch_DataOut[5:3];
-  assign Swrdata =  (VDOT) ? Sout: sll_slh_out;
+  assign Swrdata =  (V_done==1'b1)? PC: 
+                    (VDOT) ? Sout: sll_slh_out;
                
   assign Vwrdata = (VADD|SMUL) ? Vout : DataBuff; // VADD/SMUL/VLD// check after instantiation
 	assign SwrAddr = (V_done==1'b1) ?  3'b111 : Latch_DataOut[11:9];
