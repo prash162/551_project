@@ -50,14 +50,10 @@ begin
 	if(dif_exp<14)
 	begin
 	 bsticky=1'b0;
-	 
-	 for(i=0;i<14;i=i+1)
+	 for(i=0;i<dif_exp;i=i+1)
 	   	begin
-	   	  if(i<dif_exp) begin
 	     op2=op2>>1;
 	  	  bsticky=op2[0]|bsticky;
-	  	   end
-	  	   else begin op2=op2;bsticky=bsticky; end
 		  end
 	 op2[0]=bsticky;
 	end
@@ -121,7 +117,7 @@ fp_adder DUT(a, b, res, V);
 initial
 begin
 $monitor("a=%b,b=%b,result=%b,V=%b",a,b,res,V );
-a=16'b0_10110_10111_00010 ; b=16'b0_10001_00100_11110; #10; // N and N, result N,0_10110_11000_00111
+//a=16'b0_10110_10111_00010 ; b=16'b0_10001_00100_11110; #10; // N and N, result N,0_10110_11000_00111
 //a=16'b0_10110_10111_01100 ; b=16'b1_10001_01101_01001; #10; // N and N, result N, different signs, 0_10110_10101_11111 
 //a=16'b0_10110_10111_01100 ; b=16'b0_00001_01101_01001; #10; // N and N, result N, different exponent signs, expecting a
 //a=16'b1_11110_10101_00000 ; b=16'b1_11110_11111_11111; #10; // N and N, result is -infinity
@@ -139,3 +135,4 @@ a=16'b1_00000_11111_11111 ; b=16'b1_00000_11111_00000; #10; // D and D, result N
 
 end
 endmodule
+

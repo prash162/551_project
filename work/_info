@@ -18,7 +18,7 @@ OL;O;10.2c;57
 R0
 !s110 1396575608
 vaddress_calculator
-Z1 !s110 1396583912
+Z1 !s110 1396594965
 !i10b 1
 !s100 IZEBgT=?zclAd>>2l8]cV0
 IPK?aR=h7]C]?f<GNHoMOQ3
@@ -32,23 +32,23 @@ Z7 OP;L;10.3;59
 r1
 !s85 0
 31
-Z8 !s108 1396583912.150000
-!s107 C:/Users/prash162/Documents/GitHub/551_project/top.v|
-Z9 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/top.v|
+Z8 !s108 1396594965.544000
+Z9 !s107 C:/Users/prash162/Documents/GitHub/551_project/top.v|
+Z10 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/top.v|
 !s101 -O0
-Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+Z11 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 vcpu
 R2
 r1
 31
 I66mZPT:h<WTEO8Id;TjPe3
-Z11 d/filespace/people/c/chada/project_551/551_project
+Z12 d/filespace/people/c/chada/project_551/551_project
 w1396507518
 8/filespace/people/c/chada/project_551/551_project/top.v
 F/filespace/people/c/chada/project_551/551_project/top.v
 L0 2
-Z12 OL;L;10.2c;57
-Z13 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z13 OL;L;10.2c;57
+Z14 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !s107 /filespace/people/c/chada/project_551/551_project/top.v|
 !s90 -reportprogress|300|-work|work|-vopt|/filespace/people/c/chada/project_551/551_project/top.v|
 !s108 1396508251.948372
@@ -72,13 +72,13 @@ r1
 !s85 0
 31
 R8
-Z14 !s107 C:/Users/prash162/Documents/GitHub/551_project/top.v|
 R9
-!s101 -O0
 R10
+!s101 -O0
+R11
 n@c@v@p14
 vdec3to8
-Z15 !s110 1396583909
+Z15 !s110 1396594962
 !i10b 1
 !s100 4EFhMdF[Ml^ITDmVRO_Da1
 ICn=FPYX5]7Dh4m_MVFYYR1
@@ -92,19 +92,19 @@ R7
 r1
 !s85 0
 31
-!s108 1396583909.494000
+!s108 1396594961.556000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/decoder3to8.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/decoder3to8.v|
 !s101 -O0
-R10
+R11
 vdecoder
-R15
+Z16 !s110 1396594961
 !i10b 1
 !s100 M]A0zh8jA8XQE8?RRM8EM3
 I:B;oJeOi2a^deU_Lnd0?;0
 R2
 R3
-Z16 w1396560769
+Z17 w1396560769
 8C:/Users/prash162/Documents/GitHub/551_project/Decoder.v
 FC:/Users/prash162/Documents/GitHub/551_project/Decoder.v
 L0 2
@@ -112,11 +112,11 @@ R7
 r1
 !s85 0
 31
-!s108 1396583909.308000
+!s108 1396594961.353000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/Decoder.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/Decoder.v|
 !s101 -O0
-R10
+R11
 vDff16
 R15
 !i10b 1
@@ -132,40 +132,40 @@ R7
 r1
 !s85 0
 31
-!s108 1396583909.674000
+!s108 1396594962.810000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/DFF16.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/DFF16.v|
 !s101 -O0
-R10
+R11
 n@dff16
 vfp_adder
-R15
+R1
 !i10b 1
-!s100 =8]a@3YnCYz`CBEgbc]Bg0
-I^>@gh4BOMa@H<li0bQk5W0
+!s100 [ECFeX8e6ITKRkf8D3fM:1
+IV;W@1lWzNRXZ2Yg3c`H4P3
 R2
 R3
-Z17 w1396581579
-Z18 8C:/Users/prash162/Documents/GitHub/551_project/fp_adder.v
-Z19 FC:/Users/prash162/Documents/GitHub/551_project/fp_adder.v
+Z18 w1396594880
+Z19 8C:/Users/prash162/Documents/GitHub/551_project/fp_adder_pre.v
+Z20 FC:/Users/prash162/Documents/GitHub/551_project/fp_adder_pre.v
 L0 1
 R7
 r1
 !s85 0
 31
-Z20 !s108 1396583909.853000
-Z21 !s107 C:/Users/prash162/Documents/GitHub/551_project/fp_adder.v|
-Z22 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/fp_adder.v|
+Z21 !s108 1396594965.754000
+!s107 C:/Users/prash162/Documents/GitHub/551_project/fp_adder_pre.v|
+Z22 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/fp_adder_pre.v|
 !s101 -O0
-R10
+R11
 vfpu
-Z23 !s110 1396583910
+Z23 !s110 1396594963
 !i10b 1
 !s100 Y`EkQ3:FlAHfHf_AB<e6<1
 IU<A<0ZM:n[ScDIXbGDJ212
 R2
 R3
-R17
+Z24 w1396581579
 8C:/Users/prash162/Documents/GitHub/551_project/fpu.v
 FC:/Users/prash162/Documents/GitHub/551_project/fpu.v
 L0 1
@@ -173,11 +173,11 @@ R7
 r1
 !s85 0
 31
-!s108 1396583910.048000
+!s108 1396594963.328000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/fpu.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/fpu.v|
 !s101 -O0
-R10
+R11
 vMem_Write
 R23
 !i10b 1
@@ -185,7 +185,7 @@ R23
 Ik[@E=PWb]M8AkV8Yb0n;_1
 R2
 R3
-R16
+R17
 8C:/Users/prash162/Documents/GitHub/551_project/Mem_Write_FSM.v
 FC:/Users/prash162/Documents/GitHub/551_project/Mem_Write_FSM.v
 L0 1
@@ -193,11 +193,11 @@ R7
 r1
 !s85 0
 31
-!s108 1396583910.463000
+!s108 1396594963.905000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/Mem_Write_FSM.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/Mem_Write_FSM.v|
 !s101 -O0
-R10
+R11
 n@mem_@write
 vMemoryRead
 R23
@@ -206,7 +206,7 @@ R23
 IgX^2`SeF8Q_ViQ_[>L_mR2
 R2
 R3
-R16
+R17
 8C:/Users/prash162/Documents/GitHub/551_project/Mem_Read_FSM.v
 FC:/Users/prash162/Documents/GitHub/551_project/Mem_Read_FSM.v
 L0 1
@@ -214,14 +214,14 @@ R7
 r1
 !s85 0
 31
-!s108 1396583910.281000
+!s108 1396594963.612000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/Mem_Read_FSM.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/Mem_Read_FSM.v|
 !s101 -O0
-R10
+R11
 n@memory@read
 vMux8to1
-R23
+Z25 !s110 1396594964
 !i10b 1
 !s100 >TzTEOUBeK:[TQ=iHfB`53
 Imgh0gNRa?VTbG`_aWWjQo1
@@ -235,24 +235,24 @@ R7
 r1
 !s85 0
 31
-!s108 1396583910.681000
+!s108 1396594964.086000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/mux8to1.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/mux8to1.v|
 !s101 -O0
-R10
+R11
 n@mux8to1
 vPC
 R2
 r1
 31
 I9R[g5G<aI]FU8G6W1JOgI0
-R11
+R12
 w1396478503
 8/filespace/people/c/chada/project_551/551_project/program_counter.v
 F/filespace/people/c/chada/project_551/551_project/program_counter.v
 L0 3
-R12
 R13
+R14
 n@p@c
 !s90 -reportprogress|300|-work|work|-vopt|/filespace/people/c/chada/project_551/551_project/program_counter.v|
 !s107 /filespace/people/c/chada/project_551/551_project/program_counter.v|
@@ -262,7 +262,7 @@ n@p@c
 !i10b 1
 !i111 0
 vProg_Counter
-R23
+R25
 !i10b 1
 !s100 KSOn>ZB6^mi[z`6f@i_b33
 I<<COTIW?BD^]AQhGV3heD1
@@ -276,20 +276,20 @@ R7
 r1
 !s85 0
 31
-!s108 1396583910.857000
+!s108 1396594964.262000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/program_counter.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/program_counter.v|
 !s101 -O0
-R10
+R11
 n@prog_@counter
 vScalarRegFile
-Z24 !s110 1396583911
+R25
 !i10b 1
 !s100 ]ojcSDSBO@R:<L3zAj1z`0
 IckSoni3^j27X8UCHnkDFF0
 R2
 R3
-R16
+R17
 8C:/Users/prash162/Documents/GitHub/551_project/ScalarRegFile.v
 FC:/Users/prash162/Documents/GitHub/551_project/ScalarRegFile.v
 L0 1
@@ -297,20 +297,20 @@ R7
 r1
 !s85 0
 31
-!s108 1396583911.042000
+!s108 1396594964.437000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/ScalarRegFile.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/ScalarRegFile.v|
 !s101 -O0
-R10
+R11
 n@scalar@reg@file
 vsll_slh
-R24
+R25
 !i10b 1
 !s100 M0NK:PHz10[V93=f_2H_i3
 IK^kU[T[1;58Kz8:G=T@T43
 R2
 R3
-R16
+R17
 8C:/Users/prash162/Documents/GitHub/551_project/sll_slh.v
 FC:/Users/prash162/Documents/GitHub/551_project/sll_slh.v
 L0 1
@@ -318,11 +318,11 @@ R7
 r1
 !s85 0
 31
-!s108 1396583911.425000
+!s108 1396594964.809000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/sll_slh.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/sll_slh.v|
 !s101 -O0
-R10
+R11
 vSST
 R1
 !i10b 1
@@ -339,39 +339,39 @@ r1
 !s85 0
 31
 R8
-R14
 R9
-!s101 -O0
 R10
+!s101 -O0
+R11
 n@s@s@t
 vstaticram
-R24
+R25
 !i10b 1
 !s100 V6Fb2CFjQjBZ<8WeckifB3
 I6?NB<:adHR6?<V31IL`ZU2
 R2
 R3
-R16
-Z25 8C:/Users/prash162/Documents/GitHub/551_project/simplemem.v
-Z26 FC:/Users/prash162/Documents/GitHub/551_project/simplemem.v
+R17
+Z26 8C:/Users/prash162/Documents/GitHub/551_project/simplemem.v
+Z27 FC:/Users/prash162/Documents/GitHub/551_project/simplemem.v
 L0 2
 R7
 r1
 !s85 0
 31
-Z27 !s108 1396583911.228000
-Z28 !s107 C:/Users/prash162/Documents/GitHub/551_project/simplemem.v|
-Z29 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/simplemem.v|
+Z28 !s108 1396594964.614000
+Z29 !s107 C:/Users/prash162/Documents/GitHub/551_project/simplemem.v|
+Z30 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/simplemem.v|
 !s101 -O0
-R10
+R11
 vt_cpu
-R24
+R1
 !i10b 1
 !s100 B872;U;o;A^OClZOeUf@Z2
 IkHf8le;SmQNk;1aXCAob61
 R2
 R3
-R16
+R17
 8C:/Users/prash162/Documents/GitHub/551_project/t_cpu.v
 FC:/Users/prash162/Documents/GitHub/551_project/t_cpu.v
 L0 2
@@ -379,31 +379,31 @@ R7
 r1
 !s85 0
 31
-!s108 1396583911.604000
+!s108 1396594964.989000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/t_cpu.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/t_cpu.v|
 !s101 -O0
-R10
+R11
 vt_fp_adder
-R15
+!s110 1396583909
 !i10b 1
 !s100 5f0ZCEa7DX_kRNmAYa55V3
 IJB2_OMQkG<_ijHTGXFRih3
 R2
 R3
-R17
-R18
-R19
-Z30 L0 104
+R24
+8C:/Users/prash162/Documents/GitHub/551_project/fp_adder.v
+FC:/Users/prash162/Documents/GitHub/551_project/fp_adder.v
+L0 104
 R7
 r1
 !s85 0
 31
-R20
-R21
-R22
+!s108 1396583909.853000
+!s107 C:/Users/prash162/Documents/GitHub/551_project/fp_adder.v|
+!s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/fp_adder.v|
 !s101 -O0
-R10
+R11
 vt_Mem_Write
 R1
 !i10b 1
@@ -411,7 +411,7 @@ R1
 I>c5nBjQz4XnKV<;a6nZ^61
 R2
 R3
-R16
+R17
 8C:/Users/prash162/Documents/GitHub/551_project/t_Mem_Write_FSM.v
 FC:/Users/prash162/Documents/GitHub/551_project/t_Mem_Write_FSM.v
 L0 1
@@ -419,20 +419,20 @@ R7
 r1
 !s85 0
 31
-!s108 1396583911.971000
+!s108 1396594965.345000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/t_Mem_Write_FSM.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/t_Mem_Write_FSM.v|
 !s101 -O0
-R10
+R11
 nt_@mem_@write
 vt_MemoryRead
-R24
+R1
 !i10b 1
 !s100 l:L@ml?j:naP<cB@;^g`G2
 IQz;ahh3lD[5fjJZY=Z8P61
 R2
 R3
-R16
+R17
 8C:/Users/prash162/Documents/GitHub/551_project/t_Mem_Read_FSM.v
 FC:/Users/prash162/Documents/GitHub/551_project/t_Mem_Read_FSM.v
 L0 1
@@ -440,60 +440,60 @@ R7
 r1
 !s85 0
 31
-!s108 1396583911.785000
+!s108 1396594965.168000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/t_Mem_Read_FSM.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/t_Mem_Read_FSM.v|
 !s101 -O0
-R10
+R11
 nt_@memory@read
 vt_staticram
-R24
+R25
 !i10b 1
 !s100 I4jzRFJXCeKLFi1Y`e5Od2
 I>fi6h=3YfBR_3mCA2FhFW3
 R2
 R3
-R16
-R25
+R17
 R26
+R27
 L0 39
 R7
 r1
 !s85 0
 31
-R27
 R28
 R29
-!s101 -O0
-R10
-vtb_fp_adder
-IDf8B@zh2g0LiFE[I4V6JC1
-R2
-R11
-w1396571827
-8/filespace/people/c/chada/project_551/551_project/fp_adder.v
-F/filespace/people/c/chada/project_551/551_project/fp_adder.v
 R30
-R12
-r1
-31
-!s107 /filespace/people/c/chada/project_551/551_project/fp_adder.v|
-!s90 -reportprogress|300|-work|work|-vopt|/filespace/people/c/chada/project_551/551_project/fp_adder.v|
-R13
-!s110 1396574373
-!s100 Sf=:JgIX9MjGRl9O7IlOk0
-!s108 1396574373.450464
+!s101 -O0
+R11
+vtb_fp_adder
+R1
 !i10b 1
+!s100 K6HP0<Fm7YnG;Q^B7lh;22
+I`82=QMBLiH:^gEPa7PWD;1
+R2
+R3
+R18
+R19
+R20
+L0 109
+R7
+r1
 !s85 0
-!i111 0
+31
+R21
+Z31 !s107 C:/Users/prash162/Documents/GitHub/551_project/fp_adder_pre.v|
+R22
+!s101 -O0
+R11
 vVectorRegFile
-R15
+R16
 !i10b 1
 !s100 fR?nN<646LS[PNgSHozzg3
 Ig<ET<?3;?i^hM:[oKH5Eh1
 R2
 R3
-R16
+R17
 8C:/Users/prash162/Documents/GitHub/551_project/VectorRegFile.v
 FC:/Users/prash162/Documents/GitHub/551_project/VectorRegFile.v
 L0 2
@@ -501,9 +501,9 @@ R7
 r1
 !s85 0
 31
-!s108 1396583908.984000
+!s108 1396594960.935000
 !s107 C:/Users/prash162/Documents/GitHub/551_project/VectorRegFile.v|
 !s90 -reportprogress|300|-nostats|-work|work|C:/Users/prash162/Documents/GitHub/551_project/VectorRegFile.v|
 !s101 -O0
-R10
+R11
 n@vector@reg@file

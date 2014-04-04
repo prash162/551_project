@@ -84,6 +84,13 @@ Model Technology ModelSim PE Student Edition vlog 10.3 Compiler 2014.01 Jan  6 2
 Top level modules:
 	Dff16
 
+} {} {}} C:/Users/prash162/Documents/GitHub/551_project/VectorRegFile.v {1 {vlog -nostats -work work C:/Users/prash162/Documents/GitHub/551_project/VectorRegFile.v
+Model Technology ModelSim PE Student Edition vlog 10.3 Compiler 2014.01 Jan  6 2014
+-- Compiling module VectorRegFile
+
+Top level modules:
+	VectorRegFile
+
 } {} {}} C:/Users/prash162/Documents/GitHub/551_project/simplemem.v {1 {vlog -nostats -work work C:/Users/prash162/Documents/GitHub/551_project/simplemem.v
 Model Technology ModelSim PE Student Edition vlog 10.3 Compiler 2014.01 Jan  6 2014
 -- Compiling module staticram
@@ -91,13 +98,6 @@ Model Technology ModelSim PE Student Edition vlog 10.3 Compiler 2014.01 Jan  6 2
 
 Top level modules:
 	t_staticram
-
-} {} {}} C:/Users/prash162/Documents/GitHub/551_project/VectorRegFile.v {1 {vlog -nostats -work work C:/Users/prash162/Documents/GitHub/551_project/VectorRegFile.v
-Model Technology ModelSim PE Student Edition vlog 10.3 Compiler 2014.01 Jan  6 2014
--- Compiling module VectorRegFile
-
-Top level modules:
-	VectorRegFile
 
 } {} {}} C:/Users/prash162/Documents/GitHub/551_project/buffer.v {1 {vlog -nostats -work work C:/Users/prash162/Documents/GitHub/551_project/buffer.v
 Model Technology ModelSim PE Student Edition vlog 10.3 Compiler 2014.01 Jan  6 2014
@@ -115,13 +115,5 @@ Model Technology ModelSim PE Student Edition vlog 10.3 Compiler 2014.01 Jan  6 2
 
 Top level modules:
 	ScalarRegFile
-
-} {} {}} C:/Users/prash162/Documents/GitHub/551_project/fp_adder.v {1 {vlog -nostats -work work C:/Users/prash162/Documents/GitHub/551_project/fp_adder.v
-Model Technology ModelSim PE Student Edition vlog 10.3 Compiler 2014.01 Jan  6 2014
--- Compiling module fp_adder
--- Compiling module t_fp_adder
-
-Top level modules:
-	t_fp_adder
 
 } {} {}}
